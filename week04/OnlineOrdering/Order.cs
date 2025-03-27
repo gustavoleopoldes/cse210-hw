@@ -18,17 +18,15 @@ public class Order
 
     private decimal GetShippingCost()
     {
-        // Base shipping cost
         decimal baseCost = _customer.IsInUSA() ? 5m : 35m;
 
-        // Adicional cost based on shipping type
         switch (_shippingType)
         {
             case ShippingType.Economic:
-                return baseCost * 0.8m; // 20% desconto
+                return baseCost * 0.8m; 
             case ShippingType.Express:
-                return baseCost * 1.5m; // 50% adicional
-            default: // Standard
+                return baseCost * 1.5m; 
+            default: 
                 return baseCost;
         }
     }

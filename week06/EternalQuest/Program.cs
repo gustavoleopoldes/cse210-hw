@@ -1,9 +1,11 @@
+//I created a new class of achievements so there are some missions and we can report progress between completed or pending
 using System;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the EternalQuest Project.");
+        GoalManager manager = new GoalManager();
+        manager.Start();
     }
 }
